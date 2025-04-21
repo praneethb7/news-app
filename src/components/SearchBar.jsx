@@ -15,15 +15,18 @@ const SearchBar = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="my-4 flex justify-center">
+    <form onSubmit={handleSubmit} className="max-w-xl mx-auto mt-6 flex">
       <input
         type="text"
-        placeholder="Search news..."
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        className="border p-2 rounded-l-md w-2/3 max-w-md"
+        placeholder="Search news..."
+        className="flex-grow px-4 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-[#00A8E8] transition"
       />
-      <button type="submit" className="bg-blue-700 text-white px-4 rounded-r-md">
+      <button
+        type="submit"
+        className="bg-[#007EA7] hover:bg-[#00A8E8] text-white px-5 py-2 rounded-r-lg transition-all"
+      >
         Search
       </button>
     </form>
